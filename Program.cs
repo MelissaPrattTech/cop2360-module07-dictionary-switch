@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Module07DictionarySwitch
+namespace Module07DictionarySwitch //Project Namespace - Katie
 {
     class Program
     {
@@ -10,7 +10,7 @@ namespace Module07DictionarySwitch
             Dictionary<string, List<string>> courseDictionary = new Dictionary<string, List<string>>();
             bool running = true;
 
-            while (running)
+            while (running)//Displays menu options. - Katie 
             {
                 Console.WriteLine("\n--- Dictionary Menu ---");
                 Console.WriteLine("1. Populate Dictionary");
@@ -52,7 +52,7 @@ namespace Module07DictionarySwitch
                 }
             }
         }
-
+//Adds a new key and first value - Katie
         static void PopulateDictionary(Dictionary<string, List<string>> dict)
         {
             dict["Math"] = new List<string> { "Algebra", "Geometry" };
@@ -69,7 +69,7 @@ namespace Module07DictionarySwitch
             }
         }
 
-        static void RemoveKey(Dictionary<string, List<string>> dict)
+        static void RemoveKey(Dictionary<string, List<string>> dict)//Removes key from from dictionary. -Katie
         {
             Console.Write("Enter key to remove: ");
             string key = Console.ReadLine();
@@ -103,7 +103,7 @@ namespace Module07DictionarySwitch
             else
                 Console.WriteLine("Key not found.");
         }
-
+//This is the method that displays dictionary keys in order. - Katie
         static void SortKeys(Dictionary<string, List<string>> dict)
         {
             foreach (var key in new SortedDictionary<string, List<string>>(dict))
